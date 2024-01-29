@@ -1,0 +1,25 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix ejprd: <https://purl.archive.org/ejp-rd/vocabulary/> .
+@prefix orpha: <http://www.orpha.net/ORDO/Orphanet_> .
+
+<https://ericp.fdpcloud.org/absolute#organization> a foaf:Organization;
+  dc:title "ericP's test org";
+  foaf:page "https://tmp.uu3.org";
+  dc:Location "ericP's pet repo" .
+
+<https://ericp.fdpcloud.org/absolute> a dcat:Resource, dcat:DataService, fdpo:FAIRDataPoint, fdpo:MetadataService;
+  fdpo:foo "unique string";
+  fdpo:bar <https://ericp.fdpcloud.org/absolute#fragment>;
+  dc:license <https://w3id.org/ejp-rd/resources/licenses/v1.0/>;
+  dc:title "ericP's service Time-stamp: <2024-01-29 18:54:32 eric>";
+  dc:description "ericP's description";
+  dc:publisher "ericP, curiously enough";
+  <https://purl.archive.org/ejp-rd/vocabulary/personalData> false;
+  dc:language <http://www.wikidata.org/entity/Q1860>;
+  ejprd:vpConnection ejprd:VPDiscoverable, ejprd:VPContentDiscovery;
+  dc:hasVersion "1";
+  dcat:theme orpha:98895, orpha:263, orpha:97242, orpha:97245, orpha:XXX .
